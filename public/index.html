@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title></title>
+    <meta id="wpk-bid" name="wpk-bid" content="">
+    <script>
+      var appConfig = {
+        // 测试
+        'qiyepiaojia-test.51baiwang.com': {
+          bid: 'dta_2_81270'
+        },
+        // 预生产
+        'efapiao-pre.baiwang.com': {
+          bid: 'dta_2_84894'
+        },
+        // 生产
+        'dingtalk-isv.baiwang.com': {
+          bid: 'dta_2_86857'
+        },
+        'app86857.eapps.dingtalkcloud.com': {
+          bid: 'dta_2_86857'
+        },
+      }[location.hostname] || {}
+      var wpkBidMeta = document.getElementById('wpk-bid')
+      var bid = appConfig.bid || ''
+      wpkBidMeta.setAttribute('content', bid)
+      !(function(c,i,e,b){var h=i.createElement("script");
+      var f=i.getElementsByTagName("script")[0];
+      h.type="text/javascript";
+      h.crossorigin=true;
+      h.onload=function(){c[b]||(c[b]=new c.wpkReporter({ bid: bid }));
+      c[b].installAll()};
+      f.parentNode.insertBefore(h,f);
+      h.src=e})(window,document,"https://g.alicdn.com/woodpeckerx/jssdk??wpkReporter.js","__wpk");
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but project-templete-cli3 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

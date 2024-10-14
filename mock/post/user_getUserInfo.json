@@ -1,0 +1,9 @@
+{
+  "requestId": "3454UIYBJBHG324324KJJKJK",
+  "success": true,
+  "message": "成功",
+  "data": {
+    "id": "@id",
+    "name": "@cname"
+  }
+}
